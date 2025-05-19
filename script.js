@@ -1,8 +1,3 @@
-document.querySelector("form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    alert("Thank you for reaching out!");
-});
-
 // Dynamic Header
 const header = document.getElementById("dynamic-header");
 const hours = new Date().getHours();
