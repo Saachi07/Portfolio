@@ -71,3 +71,32 @@ button {
     object-fit: cover;  /* Ensures the image is properly cropped */
     border: 5px solid #333; /* Optional border */
 }
+
+/* Dark/Light Mode */
+body.light-mode {
+    background: #fff;
+    color: #333;
+}
+
+body.dark-mode {
+    background: #333;
+    color: #fff;
+}
+
+/* Fun Animations */
+h1 {
+    transition: color 0.3s ease-in-out;
+}
+
+.about-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #333;
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-photo img:hover {
+    transform: scale(1.1);
+}
