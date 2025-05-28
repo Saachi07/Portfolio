@@ -163,7 +163,7 @@ h1 {
 
 @keyframes fillBar {
   to {
-    width: var(--level, 90%);
+    width: var(--level);
   }
 }
 

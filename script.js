@@ -20,16 +20,4 @@ document.getElementById("theme-toggle").addEventListener("click", () => {
 });
 
 
-const text = "Hi, I'm Saachi — software dev & ML enthusiast.";
-const speed = 75;
-let i = 0;
 
-function typeWriter() {
-  if (i < text.length) {
-    document.querySelector('.typing-text').textContent += text.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
-
-window.onload = typeWriter;
