@@ -51,27 +51,51 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log("Theme toggle initialized successfully");
 });
 
-// Contact Form Handling
+// Contact Form with EmailJS
 document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.querySelector('#contact form');
+    // Initialize EmailJS
+    emailjs.init("LZkobiONn-hP2bxnT"); 
+    
+    const contactForm = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const successMessage = document.getElementById('success-message');
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const formData = new FormData(contactForm);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const message = formData.get('message');
+            // Disable submit button
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
             
-            // For now, just show an alert (you can replace this with actual email sending)
-            alert(`Thank you for your message, ${name}! I'll get back to you at ${email} soon.`);
+            // Prepare template parameters
+            const templateParams = {
+                from_name: document.getElementById('name').value,
+                from_email: document.getElementById('email').value,
+                message: document.getElementById('message').value,
+                to_name: 'Saachi' // Your name
+            };
             
-            // Clear the form
-            contactForm.reset();
+            // Send email using EmailJS
+            emailjs.send('service_zcnwm9s', 'template_mydx2sl', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    
+                    // Show success message
+                    contactForm.style.display = 'none';
+                    successMessage.style.display = 'block';
+                    
+                    // Reset form
+                    contactForm.reset();
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Sorry, there was an error sending your message. Please try again.');
+                })
+                .finally(function() {
+                    // Re-enable button
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Message';
+                });
         });
     }
 });
-
-
-

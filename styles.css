@@ -222,6 +222,88 @@ body.dark-mode .about-photo img {
     border-color: #e8eaed !important;
 }
 
+/* Contact Section */
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: #80CBC4;
+}
+
+#contact-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+#submit-btn {
+    background: #FFB433;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+#submit-btn:hover {
+    background: #e6a329;
+    transform: translateY(-2px);
+}
+
+#submit-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#success-message {
+    text-align: center;
+    color: #27ae60;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Dark mode contact styling */
+body.dark-mode #contact-form input,
+body.dark-mode #contact-form textarea {
+    background: #1e1e1e !important;
+    color: #e8eaed !important;
+    border-color: #404040 !important;
+}
+
+body.dark-mode #contact-form input:focus,
+body.dark-mode #contact-form textarea:focus {
+    border-color: #80CBC4 !important;
+}
+
+body.dark-mode #submit-btn {
+    background: #FFB433 !important;
+    color: white !important;
+}
+
+body.dark-mode #submit-btn:hover {
+    background: #e6a329 !important;
+}
+
 /* Fun Animations */
 h1 {
     transition: color 0.3s ease-in-out;
