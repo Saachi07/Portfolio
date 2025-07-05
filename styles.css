@@ -545,7 +545,7 @@ h1 {
   width: 0;
   background: linear-gradient(to right, #4e54c8, #8f94fb);
   border-radius: 10px;
-  animation: none; /* Will be triggered by JavaScript */
+  animation: none; 
 }
 
 @keyframes fillBar {
