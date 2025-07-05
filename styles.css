@@ -3,8 +3,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
-    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Header */
@@ -61,27 +60,29 @@ nav ul li a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 800px;
+    max-width: 900px;
     margin: 50px auto;
     text-align: left;
 }
 
 .about-text {
     flex: 1;
-    padding-right: 20px;
+    padding-right: 30px;
 }
 
 .about-photo img {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid #333;
+    border: 6px solid #333;
     transition: transform 0.3s ease-in-out;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .about-photo img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
 }
 
 /* Projects */
@@ -108,6 +109,14 @@ section {
     padding: 50px;
 }
 
+.workshop-item {
+    background: white;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .project img {
     width: 200px;
     height: auto;
@@ -131,71 +140,90 @@ button {
 
 /* Dark/Light Mode */
 body.light-mode {
-    background: #f4f4f4;
-    color: #333;
+    background: #FBF8EF !important;
+    color: #2c3e50 !important;
 }
 
 body.light-mode header {
-    background: #222;
-    color: white;
+    background: #80CBC4 !important;
+    color: white !important;
 }
 
 body.light-mode .project-card {
-    background: white;
-    color: #333;
+    background: #B4EBE6 !important;
+    color: #2c3e50 !important;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1) !important;
 }
 
 body.light-mode .skill-bar {
-    background: #e0e0e0;
+    background: #B4EBE6 !important;
+}
+
+body.light-mode .workshop-item {
+    background: #B4EBE6 !important;
+    color: #2c3e50 !important;
+}
+
+body.light-mode form input,
+body.light-mode form textarea {
+    background: #ffffff !important;
+    color: #2c3e50 !important;
+    border: 1px solid #80CBC4 !important;
+}
+
+body.light-mode button {
+    background: #FFB433 !important;
+    color: white !important;
+}
+
+body.light-mode .about-photo img {
+    border-color: #80CBC4 !important;
 }
 
 body.dark-mode {
-    background: #1a1a1a;
-    color: #fff;
+    background: #0f1419 !important;
+    color: #e8eaed !important;
 }
 
 body.dark-mode header {
-    background: #000;
-    color: white;
+    background: #1a1a1a !important;
+    color: #e8eaed !important;
 }
 
 body.dark-mode .project-card {
-    background: #2a2a2a;
-    color: #fff;
+    background: #1e1e1e !important;
+    color: #e8eaed !important;
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.05) !important;
 }
 
 body.dark-mode .skill-bar {
-    background: #444;
+    background: #2d2d2d !important;
+}
+
+body.dark-mode .workshop-item {
+    background: #1e1e1e !important;
+    color: #e8eaed !important;
 }
 
 body.dark-mode form input,
 body.dark-mode form textarea {
-    background: #2a2a2a;
-    color: #fff;
-    border: 1px solid #444;
+    background: #1e1e1e !important;
+    color: #e8eaed !important;
+    border: 1px solid #404040 !important;
 }
 
 body.dark-mode button {
-    background: #444;
-    color: white;
+    background: #404040 !important;
+    color: #e8eaed !important;
+}
+
+body.dark-mode .about-photo img {
+    border-color: #e8eaed !important;
 }
 
 /* Fun Animations */
 h1 {
     transition: color 0.3s ease-in-out;
-}
-
-.about-photo img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #333;
-    transition: transform 0.3s ease-in-out;
-}
-
-.about-photo img:hover {
-    transform: scale(1.1);
 }
 
 .skill-container {
