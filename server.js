@@ -1,10 +1,10 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
-const config = require('./config');
+require('dotenv').config();
 
 const app = express();
-const PORT = config.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors());
@@ -15,8 +15,8 @@ app.use(express.static('.')); // Serve static files from current directory
 const transporter = nodemailer.createTransport({
     service: 'gmail', // or 'outlook', 'yahoo', etc.
     auth: {
-        user: config.EMAIL_USER, // your email
-        pass: config.EMAIL_PASS  // your app password
+        user: process.env.EMAIL_USER, // your email
+        pass: process.env.EMAIL_PASS  // your app password
     }
 });
 
@@ -35,8 +35,8 @@ app.post('/api/contact', async (req, res) => {
 
         // Email content
         const mailOptions = {
-            from: config.EMAIL_USER,
-            to: config.EMAIL_USER, // Send to yourself
+            from: process.env.EMAIL_USER,
+            to: process.env.EMAIL_USER, // Send to yourself
             subject: `New Contact Message from ${name}`,
             html: `
                 <h2>New Contact Message from Your Portfolio</h2>
