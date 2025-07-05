@@ -1,10 +1,10 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
-require('dotenv').config();
+const config = require('./config');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = config.PORT || 3000;
 
 // Middleware
 app.use(cors());
@@ -12,11 +12,11 @@ app.use(express.json());
 app.use(express.static('.')); // Serve static files from current directory
 
 // Email transporter configuration
-const transporter = nodemailer.createTransporter({
+const transporter = nodemailer.createTransport({
     service: 'gmail', // or 'outlook', 'yahoo', etc.
     auth: {
-        user: process.env.EMAIL_USER, // your email
-        pass: process.env.EMAIL_PASS  // your app password
+        user: config.EMAIL_USER, // your email
+        pass: config.EMAIL_PASS  // your app password
     }
 });
 
@@ -35,8 +35,8 @@ app.post('/api/contact', async (req, res) => {
 
         // Email content
         const mailOptions = {
-            from: process.env.EMAIL_USER,
-            to: process.env.EMAIL_USER, // Send to yourself
+            from: config.EMAIL_USER,
+            to: config.EMAIL_USER, // Send to yourself
             subject: `New Contact Message from ${name}`,
             html: `
                 <h2>New Contact Message from Your Portfolio</h2>
@@ -69,6 +69,15 @@ app.post('/api/contact', async (req, res) => {
 // Health check endpoint
 app.get('/api/health', (req, res) => {
     res.json({ status: 'OK', message: 'Server is running' });
+});
+
+// Test endpoint for debugging
+app.get('/api/test', (req, res) => {
+    res.json({ 
+        status: 'OK', 
+        message: 'Backend is working!',
+        timestamp: new Date().toISOString()
+    });
 });
 
 app.listen(PORT, () => {
