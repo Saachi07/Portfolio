@@ -138,27 +138,27 @@ button {
 
 /* Dark/Light Mode */
 body.light-mode {
-    background: #ffffff !important;
+    background: #FBF8EF !important;
     color: #2c3e50 !important;
 }
 
 body.light-mode header {
-    background: #3498db !important;
+    background: #80CBC4 !important;
     color: white !important;
 }
 
 body.light-mode .project-card {
-    background: #ecf0f1 !important;
+    background: #B4EBE6 !important;
     color: #2c3e50 !important;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1) !important;
 }
 
 body.light-mode .skill-bar {
-    background: #bdc3c7 !important;
+    background: #B4EBE6 !important;
 }
 
 body.light-mode .workshop-item {
-    background: #ecf0f1 !important;
+    background: #B4EBE6 !important;
     color: #2c3e50 !important;
 }
 
@@ -166,16 +166,16 @@ body.light-mode form input,
 body.light-mode form textarea {
     background: #ffffff !important;
     color: #2c3e50 !important;
-    border: 1px solid #bdc3c7 !important;
+    border: 1px solid #80CBC4 !important;
 }
 
 body.light-mode button {
-    background: #3498db !important;
+    background: #FFB433 !important;
     color: white !important;
 }
 
 body.light-mode .about-photo img {
-    border-color: #3498db !important;
+    border-color: #80CBC4 !important;
 }
 
 body.dark-mode {
