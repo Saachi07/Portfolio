@@ -90,20 +90,23 @@
 
     <section id="contact">
         <h2>Contact Me</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit" id="submit-btn">Send Message</button>
         </form>
+        <div id="success-message" style="display: none;">
+            <p>Thank you! Your message has been sent successfully.</p>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2025 My Portfolio</p>
     </footer>
 
-    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
     <script>
         const text = "Hi, I'm Saachi — software dev & ML enthusiast.";
         const speed = 75;
