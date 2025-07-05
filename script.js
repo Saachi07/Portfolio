@@ -52,6 +52,47 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log("Theme toggle initialized successfully");
 });
 
+// Back to Top Button
+document.addEventListener('DOMContentLoaded', function() {
+    const backToTopBtn = document.getElementById('back-to-top');
+    
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+    
+    // Smooth scroll to top when button is clicked
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+    // Animate skill bars when they come into view
+    const skillBars = document.querySelectorAll('.skill-fill');
+    const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const skillObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animation = 'fillBar 2s ease-out forwards';
+            }
+        });
+    }, observerOptions);
+    
+    skillBars.forEach(bar => {
+        skillObserver.observe(bar);
+    });
+});
+
 // Contact Form with EmailJS
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize EmailJS
