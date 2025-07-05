@@ -138,69 +138,85 @@ button {
 
 /* Dark/Light Mode */
 body.light-mode {
-    background: #f4f4f4 !important;
-    color: #333 !important;
+    background: #ffffff !important;
+    color: #2c3e50 !important;
 }
 
 body.light-mode header {
-    background: #222 !important;
+    background: #3498db !important;
     color: white !important;
 }
 
 body.light-mode .project-card {
-    background: white !important;
-    color: #333 !important;
+    background: #ecf0f1 !important;
+    color: #2c3e50 !important;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1) !important;
 }
 
 body.light-mode .skill-bar {
-    background: #e0e0e0 !important;
+    background: #bdc3c7 !important;
 }
 
 body.light-mode .workshop-item {
-    background: white !important;
-    color: #333 !important;
+    background: #ecf0f1 !important;
+    color: #2c3e50 !important;
 }
 
-body.dark-mode {
-    background: #1a1a1a !important;
-    color: #fff !important;
+body.light-mode form input,
+body.light-mode form textarea {
+    background: #ffffff !important;
+    color: #2c3e50 !important;
+    border: 1px solid #bdc3c7 !important;
 }
 
-body.dark-mode header {
-    background: #000 !important;
+body.light-mode button {
+    background: #3498db !important;
     color: white !important;
 }
 
+body.light-mode .about-photo img {
+    border-color: #3498db !important;
+}
+
+body.dark-mode {
+    background: #0f1419 !important;
+    color: #e8eaed !important;
+}
+
+body.dark-mode header {
+    background: #1a1a1a !important;
+    color: #e8eaed !important;
+}
+
 body.dark-mode .project-card {
-    background: #2a2a2a !important;
-    color: #fff !important;
-    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1) !important;
+    background: #1e1e1e !important;
+    color: #e8eaed !important;
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.05) !important;
 }
 
 body.dark-mode .skill-bar {
-    background: #444 !important;
+    background: #2d2d2d !important;
 }
 
 body.dark-mode .workshop-item {
-    background: #2a2a2a !important;
-    color: #fff !important;
+    background: #1e1e1e !important;
+    color: #e8eaed !important;
 }
 
 body.dark-mode form input,
 body.dark-mode form textarea {
-    background: #2a2a2a !important;
-    color: #fff !important;
-    border: 1px solid #444 !important;
+    background: #1e1e1e !important;
+    color: #e8eaed !important;
+    border: 1px solid #404040 !important;
 }
 
 body.dark-mode button {
-    background: #444 !important;
-    color: white !important;
+    background: #404040 !important;
+    color: #e8eaed !important;
 }
 
 body.dark-mode .about-photo img {
-    border-color: #fff !important;
+    border-color: #e8eaed !important;
 }
 
 /* Fun Animations */
