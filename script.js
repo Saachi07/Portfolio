@@ -51,5 +51,27 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log("Theme toggle initialized successfully");
 });
 
+// Contact Form Handling
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.querySelector('#contact form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(contactForm);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+            
+            // For now, just show an alert (you can replace this with actual email sending)
+            alert(`Thank you for your message, ${name}! I'll get back to you at ${email} soon.`);
+            
+            // Clear the form
+            contactForm.reset();
+        });
+    }
+});
+
 
 
