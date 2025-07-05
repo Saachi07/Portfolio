@@ -3,7 +3,6 @@ const header = document.getElementById("dynamic-header");
 const hours = new Date().getHours();
 header.textContent = hours < 12 ? "Good Morning!" : hours < 18 ? "Good Afternoon!" : "Good Evening!";
 
-
 // Theme Toggle
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById("theme-toggle");
