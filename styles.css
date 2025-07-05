@@ -13,6 +13,7 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
+    position: relative;
 }
 
 /* Navigation */
@@ -30,6 +31,29 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+}
+
+/* Theme Toggle */
+.theme-toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#theme-toggle {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background: white;
+    color: #222;
 }
 
 /* About Section */
@@ -107,13 +131,53 @@ button {
 
 /* Dark/Light Mode */
 body.light-mode {
-    background: #fff;
+    background: #f4f4f4;
     color: #333;
 }
 
+body.light-mode header {
+    background: #222;
+    color: white;
+}
+
+body.light-mode .project-card {
+    background: white;
+    color: #333;
+}
+
+body.light-mode .skill-bar {
+    background: #e0e0e0;
+}
+
 body.dark-mode {
-    background: #333;
+    background: #1a1a1a;
     color: #fff;
+}
+
+body.dark-mode header {
+    background: #000;
+    color: white;
+}
+
+body.dark-mode .project-card {
+    background: #2a2a2a;
+    color: #fff;
+}
+
+body.dark-mode .skill-bar {
+    background: #444;
+}
+
+body.dark-mode form input,
+body.dark-mode form textarea {
+    background: #2a2a2a;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+body.dark-mode button {
+    background: #444;
+    color: white;
 }
 
 /* Fun Animations */
