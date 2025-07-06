@@ -114,6 +114,8 @@ document.addEventListener('DOMContentLoaded', function() {
             };
             
             try {
+                console.log('Sending form data:', formData);
+                
                 // Send to our Node.js backend
                 const response = await fetch('/api/contact', {
                     method: 'POST',
@@ -123,7 +125,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     body: JSON.stringify(formData)
                 });
                 
+                console.log('Response status:', response.status);
+                console.log('Response headers:', response.headers);
+                
                 const result = await response.json();
+                console.log('Response data:', result);
                 
                 if (result.success) {
                     // Show success message
@@ -137,7 +143,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 
             } catch (error) {
-                console.error('Error:', error);
+                console.error('Network Error Details:', error);
+                console.error('Error name:', error.name);
+                console.error('Error message:', error.message);
                 alert('Network error. Please check your connection and try again.');
             } finally {
                 // Re-enable button
