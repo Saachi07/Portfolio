@@ -214,17 +214,17 @@ body.dark-mode .project-image-placeholder {
 }
 
 body.dark-mode .tech-tag {
-    background: #2d2d2d !important;
-    color: #e8eaed !important;
-    border-color: #404040 !important;
+    background: #2a1a4a !important;
+    color: #FFCC00 !important;
+    border-color: #B13BFF !important;
 }
 
 body.dark-mode .project-link {
-    color: #80CBC4 !important;
+    color: #B13BFF !important;
 }
 
 body.dark-mode .project-link:hover {
-    color: #FFB433 !important;
+    color: #FFCC00 !important;
 }
 
 /* Back to Top Button */
@@ -267,12 +267,13 @@ body.dark-mode .project-link:hover {
 
 /* Dark mode back to top */
 body.dark-mode .back-to-top-btn {
-    background: #FFB433 !important;
-    color: white !important;
+    background: #FFCC00 !important;
+    color: #471396 !important;
 }
 
 body.dark-mode .back-to-top-btn:hover {
-    background: #e6a329 !important;
+    background: #B13BFF !important;
+    color: white !important;
 }
 
 section {
@@ -351,44 +352,44 @@ body.light-mode .about-photo img {
 }
 
 body.dark-mode {
-    background: #0f1419 !important;
-    color: #e8eaed !important;
+    background: #471396 !important;
+    color: #ffffff !important;
 }
 
 body.dark-mode header {
-    background: #1a1a1a !important;
-    color: #e8eaed !important;
+    background: #2a1a4a !important;
+    color: #ffffff !important;
 }
 
 body.dark-mode .project-card {
-    background: #1e1e1e !important;
-    color: #e8eaed !important;
-    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.05) !important;
+    background: #3a1f5a !important;
+    color: #ffffff !important;
+    box-shadow: 0px 4px 6px rgba(255, 204, 0, 0.1) !important;
 }
 
 body.dark-mode .skill-bar {
-    background: #2d2d2d !important;
+    background: #2a1a4a !important;
 }
 
 body.dark-mode .workshop-item {
-    background: #1e1e1e !important;
-    color: #e8eaed !important;
+    background: #3a1f5a !important;
+    color: #ffffff !important;
 }
 
 body.dark-mode form input,
 body.dark-mode form textarea {
-    background: #1e1e1e !important;
-    color: #e8eaed !important;
-    border: 1px solid #404040 !important;
+    background: #3a1f5a !important;
+    color: #ffffff !important;
+    border: 1px solid #B13BFF !important;
 }
 
 body.dark-mode button {
-    background: #404040 !important;
-    color: #e8eaed !important;
+    background: #FFCC00 !important;
+    color: #471396 !important;
 }
 
 body.dark-mode .about-photo img {
-    border-color: #e8eaed !important;
+    border-color: #FFCC00 !important;
 }
 
 /* Social Links */
@@ -426,12 +427,13 @@ body.dark-mode .about-photo img {
 
 /* Dark mode social links */
 body.dark-mode .social-link {
-    background: #FFB433 !important;
-    color: white !important;
+    background: #FFCC00 !important;
+    color: #471396 !important;
 }
 
 body.dark-mode .social-link:hover {
-    background: #e6a329 !important;
+    background: #B13BFF !important;
+    color: white !important;
 }
 
 /* Contact Section */

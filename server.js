@@ -60,10 +60,22 @@ app.post('/api/contact', async (req, res) => {
         });
 
     } catch (error) {
-        console.error('Email error:', error);
+        console.error('Email error details:', error);
+        console.error('Error message:', error.message);
+        console.error('Error code:', error.code);
+        
+        let errorMessage = 'Failed to send message. Please try again.';
+        
+        if (error.code === 'EAUTH') {
+            errorMessage = 'Email authentication failed. Please check your email credentials.';
+        } else if (error.code === 'ECONNECTION') {
+            errorMessage = 'Could not connect to email server. Please check your internet connection.';
+        }
+        
         res.status(500).json({ 
             success: false, 
-            message: 'Failed to send message. Please try again.' 
+            message: errorMessage,
+            error: error.message
         });
     }
 });
