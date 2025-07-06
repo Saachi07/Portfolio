@@ -117,7 +117,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('Sending form data:', formData);
                 
                 // Send to our Node.js backend
-                const response = await fetch('/api/contact', {
+                //const response = await fetch('/api/contact', {
+                const response = await fetch('https://your-app-name.railway.app/api/contact', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
