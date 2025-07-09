@@ -1,6 +1,6 @@
 module.exports = (req, res) => {
   const allowedOrigins = [
-    'https://Saachi07.github.io', // your GitHub Pages URL
+    'https://Saachi07.github.io/Portfolio/', // your GitHub Pages URL
   ];
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
@@ -12,5 +12,12 @@ module.exports = (req, res) => {
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
   }
-  // ... you can add your POST handling logic here ...
+
+  if (req.method === 'POST') {
+    // You can process the form data here if needed
+    return res.status(200).json({ success: true, message: 'Form received!' });
+  }
+
+  res.setHeader('Allow', ['POST', 'OPTIONS']);
+  return res.status(405).end('Method Not Allowed');
 };
